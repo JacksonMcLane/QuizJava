@@ -3,10 +3,10 @@ package com.example.quizjava;
 import java.util.List;
 
 public class Quiz {
-    int currentQuestion;
-    List QuestionList;
-    Question question;
-    int score;
+    private int currentQuestion;
+    private List QuestionList;
+    private Question question;
+    private int score;
 
     public int getCurrentQuestion() {
         return currentQuestion;
@@ -40,7 +40,7 @@ public class Quiz {
     }
 
     public boolean isQuestionsRemaining(){
-        if(currentQuestion+1 < QuestionList.size()-1) {
+        if (currentQuestion + 1 <= QuestionList.size() - 1) {
             return true;
         }
         else{ return false; }
