@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="false_button">Falso</string>
+    <string name="true_button">Cierto</string>
+    <string name="app_name">Prueba Applicación</string>
+    <string name="score_textView">Puntaje:</string>
+</resources>

@@ -4,25 +4,14 @@ import java.util.List;
 
 public class Quiz {
     private int currentQuestion;
-    private List QuestionList;
-    private Question question;
+    private List<Question> QuestionList;
     private int score;
 
-    public int getCurrentQuestion() {
-        return currentQuestion;
+    public Quiz(List<Question> QuestionList) {
+        this.QuestionList = QuestionList;
+        currentQuestion = 0;
     }
 
-    public void setCurrentQuestion(int currentQuestion) {
-        this.currentQuestion = currentQuestion;
-    }
-
-    public List getQuestionList() {
-        return QuestionList;
-    }
-
-    public void setQuestionList(List questionList) {
-        QuestionList = questionList;
-    }
 
     public int getScore() {
         return score;
@@ -32,14 +21,19 @@ public class Quiz {
         this.score = score;
     }
 
-    public boolean checkAnswer(boolean answer){
-//        if(answer == QuestionList.get(currentQuestion.getAnswer())){
-//            return true;
-//        }
+    public boolean checkAnswer(boolean answer) {
+        if(answer == QuestionList.get(currentQuestion).getAnswer()) {
+            score += 100;
+            return true;
+        }
         return false;
     }
 
-    public boolean isQuestionsRemaining(){
+    public String getQuestionText() {
+        return QuestionList.get(currentQuestion).getQuestion();
+    }
+
+    public boolean isQuestionsRemaining() {
         if (currentQuestion + 1 <= QuestionList.size() - 1) {
             return true;
         }
