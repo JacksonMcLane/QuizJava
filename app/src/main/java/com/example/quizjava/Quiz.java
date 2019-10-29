@@ -23,7 +23,7 @@ public class Quiz {
 
     public boolean checkAnswer(boolean answer) {
         if(answer == QuestionList.get(currentQuestion).getAnswer()) {
-            score += 100;
+            score += 1;
             return true;
         }
         return false;

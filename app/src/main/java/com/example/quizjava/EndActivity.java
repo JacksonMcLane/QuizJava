@@ -23,7 +23,7 @@ public class EndActivity extends AppCompatActivity {
         setListeners();
         Intent lastIntent = getIntent();
         int score = lastIntent.getIntExtra(MainActivity.EXTRA_SCORE, -1);
-        textViewScore.setText(getString(R.string.score_textView) + score);
+        textViewScore.setText(getString(R.string.score_textView) + score + "/10");
     }
 
     private void setListeners() {
